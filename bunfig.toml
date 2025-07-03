@@ -1,0 +1,19 @@
+name    = "contest"
+version = "0.1.0"
+private = true
+
+# point d'entrée pour bun run
+entry = "src/index.tsx"
+
+[jsx]
+# on utilise le runtime React
+import_source = "react"
+
+[test]
+preload = ["./tests/preload/happydom.ts", "./tests/preload/testing-library.ts"]
+coverageThreshold = 0.8
+
+coverageReporter  = ["text", "lcov"] 
+coverageDir = "reports/coverage" 
+# always enable coverage
+coverage = true
