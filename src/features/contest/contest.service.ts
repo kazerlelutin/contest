@@ -2,6 +2,7 @@ import { eq } from "drizzle-orm";
 import { db } from "../../db/db";
 import { contests } from "../../db/schema";
 import type { Contest } from "./contest.type";
+import { generateUUIDv7 } from "@/utils/uuid";
 
 const service =  {
     async createContest(contest: Contest): Promise<Contest> {
@@ -27,8 +28,13 @@ const service =  {
         if (endDate < Date.now()) {
             throw new Error("End date must be in the future");
         }
+        
         try {
-            const result = await db.insert(contests).values(contest as any).returning();
+            const result = await db.insert(contests).values(
+                {
+                    ...contest,
+                    id: generateUUIDv7(),
+                } as any).returning();
             return result[0] as unknown as Contest;
         } catch (error) {
             console.error(error);
