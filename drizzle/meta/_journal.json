@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1751556043613,
-      "tag": "0000_strong_blockbuster",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1751556550031,
-      "tag": "0001_sweet_chronomancer",
+      "when": 1751556828028,
+      "tag": "0000_slim_thunderbolt",
       "breakpoints": true
     }
   ]

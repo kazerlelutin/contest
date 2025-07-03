@@ -1,5 +1,5 @@
 CREATE TABLE `challengers` (
-	`id` text PRIMARY KEY DEFAULT '0197d0e0-3358-7545-a32d-fb79dcd87a72' NOT NULL,
+	`id` text PRIMARY KEY DEFAULT '0197d0ec-2b77-7893-6216-c1cb57c6d061' NOT NULL,
 	`contest_id` text,
 	`name` text,
 	`email` text,
@@ -11,10 +11,10 @@ CREATE TABLE `challengers` (
 );
 --> statement-breakpoint
 CREATE TABLE `contests ` (
-	`id` text PRIMARY KEY DEFAULT '0197d0e0-3356-784e-e43f-a8f2e0201538' NOT NULL,
+	`id` text PRIMARY KEY DEFAULT '0197d0ec-2b76-7fa9-1266-ee833a327893' NOT NULL,
 	`name` text,
 	`gift` text,
-	`key` text DEFAULT '0197d0e0-3357-7420-1b39-5a865593c26b',
+	`key` text DEFAULT '0197d0ec-2b76-7997-bc90-94ff5a0d419f',
 	`min_challengers` integer,
 	`max_challengers` integer,
 	`start_date` integer,
