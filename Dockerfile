@@ -6,7 +6,6 @@ COPY . .
 RUN bun install \
 && bun build src/hydrate.tsx --outfile ./public/hydrate.mjs --format esm --minify \
 && bun run db:generate \
-&& bun run migrate \
 && bun build --compile --minify --sourcemap src/index.tsx --outfile contest.server
 
 # ── runtime stage ─────────────────────────
@@ -21,4 +20,4 @@ COPY --from=builder /app/public /app/public
 RUN chmod +x /usr/local/bin/contest.server
 
 EXPOSE 3000
-ENTRYPOINT ["/usr/local/bin/contest.server"] 
+ENTRYPOINT ["sh", "-c", "bun run ./src/db/migrate.ts && /usr/local/bin/contest.server"] 
