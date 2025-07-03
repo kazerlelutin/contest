@@ -12,6 +12,7 @@ const service = {
     
             try {
                 const result = await db.insert(challengers).values({
+                    id: crypto.randomUUID(),
                     name,
                     email,
                     contestId,
