@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "ab1dbaaf-5226-4b3d-a5fc-5ccad888ac50",
+  "id": "a51519ef-7ab7-473a-9902-81514da867f9",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "challengers": {
@@ -9,14 +9,15 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": true,
           "notNull": true,
-          "autoincrement": false
+          "autoincrement": false,
+          "default": "'0197d0e0-3358-7545-a32d-fb79dcd87a72'"
         },
         "contest_id": {
           "name": "contest_id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
@@ -92,10 +93,11 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "integer",
+          "type": "text",
           "primaryKey": true,
           "notNull": true,
-          "autoincrement": false
+          "autoincrement": false,
+          "default": "'0197d0e0-3356-784e-e43f-a8f2e0201538'"
         },
         "name": {
           "name": "name",
@@ -117,7 +119,7 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false,
-          "default": "'0197c7bb-c22d-788d-c93c-b9699620593a'"
+          "default": "'0197d0e0-3357-7420-1b39-5a865593c26b'"
         },
         "min_challengers": {
           "name": "min_challengers",

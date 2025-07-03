@@ -9,7 +9,7 @@
     "test": "bun test",
     "test:watch": "bun test --watch",
     "test:coverage": "bun test --coverage",
-    "build": "bun build src/hydrate.tsx --outfile ./public/hydrate.mjs --format esm --minify && bun build --compile --minify --sourcemap ./src/index.tsx --outfile basic.server"
+    "build": "bun build src/hydrate.tsx --outfile ./public/hydrate.mjs --format esm --minify && bun build --compile --minify --sourcemap ./src/index.tsx --outfile contest.server"
   },
   "devDependencies": {
     "@happy-dom/global-registrator": "^17.4.7",

@@ -1,6 +1,6 @@
 PRAGMA foreign_keys=OFF;--> statement-breakpoint
 CREATE TABLE `__new_challengers` (
-	`id` text PRIMARY KEY DEFAULT '0197cf1e-34a0-7845-43b7-d03819586f75' NOT NULL,
+	`id` text PRIMARY KEY DEFAULT '0197d0e7-ed87-7dd6-cc24-52765b85e731' NOT NULL,
 	`contest_id` text,
 	`name` text,
 	`email` text,
@@ -16,10 +16,10 @@ DROP TABLE `challengers`;--> statement-breakpoint
 ALTER TABLE `__new_challengers` RENAME TO `challengers`;--> statement-breakpoint
 PRAGMA foreign_keys=ON;--> statement-breakpoint
 CREATE TABLE `__new_contests ` (
-	`id` text PRIMARY KEY DEFAULT '0197cf1e-349c-7ff2-95ac-0875c8ceb841' NOT NULL,
+	`id` text PRIMARY KEY DEFAULT '0197d0e7-ed86-75d0-4460-522bf0c1870a' NOT NULL,
 	`name` text,
 	`gift` text,
-	`key` text DEFAULT '0197cf1e-349f-735e-0b40-c3ffdac55629',
+	`key` text DEFAULT '0197d0e7-ed86-7fe8-d5e9-3831c2652994',
 	`min_challengers` integer,
 	`max_challengers` integer,
 	`start_date` integer,

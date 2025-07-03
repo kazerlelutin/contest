@@ -1,6 +1,6 @@
 CREATE TABLE `challengers` (
-	`id` integer PRIMARY KEY NOT NULL,
-	`contest_id` integer,
+	`id` text PRIMARY KEY DEFAULT '0197d0e0-3358-7545-a32d-fb79dcd87a72' NOT NULL,
+	`contest_id` text,
 	`name` text,
 	`email` text,
 	`created_at` integer DEFAULT CURRENT_TIMESTAMP,
@@ -11,10 +11,10 @@ CREATE TABLE `challengers` (
 );
 --> statement-breakpoint
 CREATE TABLE `contests ` (
-	`id` integer PRIMARY KEY NOT NULL,
+	`id` text PRIMARY KEY DEFAULT '0197d0e0-3356-784e-e43f-a8f2e0201538' NOT NULL,
 	`name` text,
 	`gift` text,
-	`key` text DEFAULT '0197c7bb-c22d-788d-c93c-b9699620593a',
+	`key` text DEFAULT '0197d0e0-3357-7420-1b39-5a865593c26b',
 	`min_challengers` integer,
 	`max_challengers` integer,
 	`start_date` integer,
