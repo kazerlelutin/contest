@@ -10,14 +10,14 @@ RUN bun install \
 
 # ── runtime stage ─────────────────────────
 FROM docker.io/oven/bun:latest
-WORKDIR /usr/src/app
+WORKDIR /app
 
 ENV BUN_ENV=production
 
-COPY --from=builder /usr/src/app/contest.server /usr/local/bin/contest.server
-COPY --from=builder /usr/src/app/public /usr/src/app/public
-COPY --from=builder /usr/src/app/src /usr/src/app/src
-COPY --from=builder /usr/src/app/drizzle /usr/src/app/drizzle
+COPY --from=builder /app/contest.server /usr/local/bin/contest.server
+COPY --from=builder /app/src /app/src
+COPY --from=builder /app/drizzle /app/drizzle
+COPY --from=builder /app/public /app/public
 
 RUN chmod +x /usr/local/bin/contest.server
 
